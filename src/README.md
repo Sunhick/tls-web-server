@@ -18,3 +18,6 @@ openssl req -new -nodes -newkey rsa:2048 -keyout localhost.key -out localhost.cs
 ```sh
 openssl x509 -req -sha256 -days 356 -in localhost.csr -CA LocalCA.pem -CAkey LocalCA.key -CAcreateserial -extfile domains.conf -out localhost.crt
 ```
+
+## Import Root CA 
+On MacOS import the LocalCA (Root CA) certificate into keychain and set the trust to "Always allow".
